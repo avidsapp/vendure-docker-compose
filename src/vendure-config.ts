@@ -25,8 +25,8 @@ export const config: VendureConfig = {
     },
     authOptions: {
         superadminCredentials: {
-            identifier: 'superadmin',
-            password: 'superadmin',
+            identifier: process.env.SUPERADMIN_USERNAME || 'superadmin',
+            password: process.env.SUPERADMIN_PASSWORD || 'superadmin',
         },
         requireVerification: true,
         cookieOptions: {

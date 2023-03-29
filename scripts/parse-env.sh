@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# format to use:
+# ./parse-env.sh
+
+echo "Setting ENV VARS"
+. ../.env
+
+# REMOVE CARRAIGE RETURNS FROM .env
+DOMAIN_URL="${DOMAIN_URL//$'\r'}"
+GCLOUD_PROJECT="${GCLOUD_PROJECT//$'\r'}"
+GCLOUD_REGION="${GCLOUD_REGION//$'\r'}"
+GCLOUD_ZONE="${GCLOUD_ZONE//$'\r'}"
+VM_IMAGE="${VM_IMAGE//$'\r'}"
+SERVICE_NAME="${SERVICE_NAME//$'\r'}"
+BUCKET="${BUCKET//$'\r'}"
+SUPERADMIN_USERNAME="${SUPERADMIN_USERNAME//$'\r'}"
+SUPERADMIN_PASSWORD="${SUPERADMIN_PASSWORD//$'\r'}"
+DB_PASSWORD="${DB_PASSWORD//$'\r'}"
+DB_USER="${DB_USER//$'\r'}"
+DB_NAME="${DB_NAME//$'\r'}"
+SMTP_HOST="${SMTP_HOST//$'\r'}"
+SMTP_USER="${SMTP_USER//$'\r'}"
+SMTP_PASSWORD="${SMTP_PASSWORD//$'\r'}"
