@@ -31,8 +31,8 @@ select automation in "${choices[@]}"; do
             break
             ;;
         "Deployment - Initial Run")
-            echo "Parsing ENV VARS"
-            source ./parse-env.sh
+            echo "Loading ENV VARS"
+            . ../.env
 
             # echo "Create GCloud Instance"
             # gcloud compute instances create $SERVICE_NAME \
